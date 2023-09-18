@@ -12,3 +12,9 @@ git clone https://github.com/userxxxx/repositorioxxx.git
 ```
 4. Llevar a cabo las contribuciones 
 
+5. Por ultimo hacer un push a la rama que se esta haciendo el cambio, mediante 
+
+```git 
+git push -u origin main 
+
+```
