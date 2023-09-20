@@ -12,11 +12,11 @@ ALTER TABLE IF EXISTS public.alumnos
 
 CREATE TABLE public.libros
 (
-    id_libros serial NOT NULL,
-    titulo_libros character varying(100) NOT NULL,
-    autor_libros character varying(100) NOT NULL,
-    fecha_publicacion_libros timestamp without time zone NOT NULL,
-    CONSTRAINT id_libros_pk PRIMARY KEY (id_libros)
+    id_libro serial NOT NULL,
+    titulo_libro character varying(100) NOT NULL,
+    autor_libro character varying(100) NOT NULL,
+    fecha_publicacion_libro timestamp without time zone NOT NULL,
+    CONSTRAINT id_libro_pk PRIMARY KEY (id_libro)
 );
 
 ALTER TABLE IF EXISTS public.libros
