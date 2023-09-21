@@ -40,7 +40,7 @@ CREATE TABLE public.resenas
     id_alumno integer,
     id_libro integer,
     contenido_resena text NOT NULL,
-    fecha_publicacion_resena timestamp without time zone NOT NULL,
+    fecha_publicacion_resena DATE without time zone NOT NULL,
     CONSTRAINT id_resena_pk PRIMARY KEY (id_resena),
     CONSTRAINT id_libro_fk FOREIGN KEY (id_libro)
         REFERENCES public.libros (id_libro) MATCH SIMPLE
@@ -65,8 +65,8 @@ CREATE TABLE public.prestamos
     id_prestamo serial NOT NULL,
     id_alumno integer NOT NULL,
     id_libro integer NOT NULL,
-    fecha_inicio_prestamo timestamp without time zone NOT NULL,
-    fecha_regreso_prestamo timestamp without time zone NOT NULL,
+    fecha_inicio_prestamo DATE without time zone NOT NULL,
+    fecha_regreso_prestamo DATE without time zone NOT NULL,
     CONSTRAINT id_prestamo_pk PRIMARY KEY (id_prestamo),
     CONSTRAINT id_alumno_fk FOREIGN KEY (id_alumno)
         REFERENCES public.alumnos (id_alumno) MATCH SIMPLE
