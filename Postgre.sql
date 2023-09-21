@@ -39,7 +39,7 @@ CREATE TABLE public.resenas
     id_resena serial NOT NULL,
     id_alumno integer,
     id_libro integer,
-    contenido_resena character varying(255) NOT NULL,
+    contenido_resena text NOT NULL,
     fecha_publicacion_resena timestamp without time zone NOT NULL,
     CONSTRAINT id_resena_pk PRIMARY KEY (id_resena),
     CONSTRAINT id_libro_fk FOREIGN KEY (id_libro)
@@ -58,7 +58,7 @@ ALTER TABLE IF EXISTS public.resenas
     OWNER to postgres;
 
 ALTER TABLE IF EXISTS public.libros
-    ADD COLUMN isdn_libro integer NOT NULL;
+    ADD COLUMN isdn_libro NUMERIC(10) NOT NULL;
 
 CREATE TABLE public.prestamos
 (
